@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<a> 'Ведите диапозон чисел' </a>
+<form method="POST" >{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Получить число</button>
+    </form>
+<h1><a href="{% url 'page' %}">{{text}}{{data}}</a></h1>
+</body>
+</html>
