@@ -12,7 +12,8 @@ def page(request):
         number_1 = dicts['number_1']
         number_2 = dicts['number_2']
         payload = {'number_1': number_1, 'number_2': number_2}
-        request_response_servis = requests.post('http://127.0.0.1:8000/',
+
+        request_response_servis = requests.post('https://microservices.pythonanywhere.com/',
                                           json=payload)
         print('request_response_servis = ', request_response_servis)
         data_dict = json.loads(request_response_servis.content)
