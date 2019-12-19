@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Send email</title>
+</head>
+<body>
+<h1><a> 'Введите данные отправителя и получаеля сообщения' </a></h1>
+<form method="POST" >{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Отправить сообщение</button>
+    </form>
+<h1><a href="{% url 'email' %}">{{text}}{{data}}</a></h1>
+</body>
+</html>
